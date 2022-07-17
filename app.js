@@ -1,12 +1,9 @@
 // npm install @mailchimp/mailchimp_marketing
-//mailchimp api key- b311002e376b11b3a233c1c552e69dfe-us11
-//list ID- aac89aaffd
 
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const express = require("express");
 const bodyParser = require("body-parser");
-// const request= require("request");
-// const https= require("https");
+require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.urlencoded({
@@ -19,13 +16,13 @@ app.get("/", function(req, res) {
 });
 
 mailchimp.setConfig({
-  apiKey: "b311002e376b11b3a233c1c552e69dfe-us11",
-  server: "us11"
+  apiKey: process.env.API_KEY,
+  server: process.env.SERVER_KEY
 });
 
 app.post("/", function(req, res) {
 
-  const listid = "aac89aaffd";
+  const listid = process.env.LIST_ID;
   const subscribingUser = {
     firstName: req.body.fname,
     lastName: req.body.lname,
