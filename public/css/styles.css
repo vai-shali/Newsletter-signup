@@ -1,0 +1,27 @@
+.custom-bg {
+/* fallback for old browsers */
+background: #9A86A4;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #9A86A4, #B1BCE6);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #9A86A4, #B1BCE6);
+}
+
+.top{
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle{
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.bottom{
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
